@@ -1,11 +1,11 @@
 import "../global.css";
 
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import "@/lib/i18n";
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 export default function RootLayout() {
-  /*const [loaded] = useFonts({
+	/*const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
@@ -14,10 +14,10 @@ export default function RootLayout() {
   }
   */
 
-  return (
-    <>
-      <Stack screenOptions={{ headerShown: false }} />
-      <StatusBar style="auto" />
-    </>
-  );
+	return (
+		<>
+			<Stack screenOptions={{ headerShown: false }} />
+			<StatusBar style="auto" />
+		</>
+	);
 }

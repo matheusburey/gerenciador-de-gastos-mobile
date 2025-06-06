@@ -1,8 +1,18 @@
 {
-    "home": {
-        "welcome": "Hello World!"
-    },
-    "expenses": {
-        "title": "Expenses!"
-    }
+	"home": {
+		"title": "Home!"
+	},
+	"login": {
+		"title": "Login!"
+	},
+	"dashboard": {
+		"title": "Dashboard!"
+	},
+	"expenses": {
+		"title": "Expenses!"
+	},
+	"menu": {
+		"dashboard": "Dashboard",
+		"expenses": "Expenses"
+	}
 }

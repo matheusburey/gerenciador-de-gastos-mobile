@@ -1,8 +1,18 @@
 {
-    "home": {
-        "welcome": "Olá Mundo!"
-    },
-    "expenses": {
-        "title": "Despesas!"
-    }
+	"home": {
+		"title": "Home!"
+	},
+	"login": {
+		"title": "Login!"
+	},
+	"dashboard": {
+		"title": "Dashboard!"
+	},
+	"expenses": {
+		"title": "Despesas!"
+	},
+	"menu": {
+		"dashboard": "Dashboard",
+		"expenses": "Despesas"
+	}
 }
