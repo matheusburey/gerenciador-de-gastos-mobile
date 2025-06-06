@@ -1,0 +1,8 @@
+{
+    "home": {
+        "welcome": "Hello World!"
+    },
+    "expenses": {
+        "title": "Expenses!"
+    }
+}
