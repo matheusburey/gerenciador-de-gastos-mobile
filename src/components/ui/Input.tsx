@@ -1,5 +1,5 @@
-import { TextInput, type TextInputProps } from "react-native";
 import { cn } from "@/lib/utils";
+import { TextInput, type TextInputProps } from "react-native";
 
 interface InputProps extends TextInputProps {
 	editable?: boolean;
@@ -17,7 +17,7 @@ export default function Input({
 				"text-base lg:text-sm native:text-lg native:leading-[1.25] text-foreground",
 				"placeholder:text-muted-foreground file:border-0 file:bg-transparent",
 				"file:font-medium w-full",
-				!!props.editable && "opacity-50",
+				!!props.editable && "opacity-50" || "opacity-100",
 				className,
 			)}
 			placeholderClassName={cn("text-muted-foreground", placeholderClassName)}
