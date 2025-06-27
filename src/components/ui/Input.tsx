@@ -10,13 +10,13 @@ export default function Input({
 	return (
 		<TextInput
 			className={cn(
-				"h-10 native:h-12 rounded-md border border-input bg-white px-3",
-				"text-base lg:text-sm native:text-lg native:leading-[1.25] text-foreground",
-				"placeholder:text-muted-foreground file:border-0 file:bg-transparent",
-				"file:font-medium w-full",
-				editable ? "opacity-50" : "opacity-100",
+				"h-14 rounded-md border px-3 text-lg font-bold focus:border-purple-600",
+				editable === false
+					? "border-purple-300 bg-gray-300"
+					: "bg-white border-transparent text-purple-800",
 				className,
 			)}
+			editable={editable}
 			placeholderClassName={cn("text-muted-foreground", placeholderClassName)}
 			{...props}
 		/>
