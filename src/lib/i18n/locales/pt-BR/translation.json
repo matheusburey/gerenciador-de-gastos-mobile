@@ -3,7 +3,32 @@
 		"title": "Home!"
 	},
 	"login": {
-		"title": "Entrar em sua Conta!"
+		"title": "Entrar em sua Conta!",
+		"email": "E-mail",
+		"password": "Senha",
+		"button": "Entrar",
+		"forgot": "Esqueceu sua senha?",
+		"createAccountQuestion": "Não tem uma conta?",
+		"createAccount": "Crie uma!",
+		"error": "Algo deu errado!",
+		"serverError": "Ocorreu um erro no servidor, tente novamente!"
+	},
+	"register": {
+		"title": "Criar uma Conta!",
+		"name": "Nome",
+		"email": "E-mail",
+		"phone": "Telefone",
+		"password": "Senha",
+		"confirmPassword": "Confirmar Senha",
+		"button": "Criar Conta",
+		"terms": "Eu aceito os",
+		"termsLink": "Termos de Uso",
+		"error": "Algo deu errado!",
+		"errorPassword": "As senhas devem ser iguais!",
+		"serverError": "Ocorreu um erro no servidor, tente novamente!",
+		"successTitle": "Conta criada com sucesso!",
+		"success": "Conta criada com sucesso!",
+		"buttonSuccess": "Ir para o Login"
 	},
 	"dashboard": {
 		"title": "Dashboard!"
