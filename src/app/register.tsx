@@ -1,14 +1,11 @@
 import Checkbox from "expo-checkbox";
-
-import { Alert, Text, TouchableOpacity, View } from "react-native";
-
+import { router } from "expo-router";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import { Alert, Text, TouchableOpacity, View } from "react-native";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import { createUser } from "@/services/users";
-import { router } from "expo-router";
-import { useMemo, useState } from "react";
 
 export default function RegisterScreen() {
 	const { t } = useTranslation();
@@ -38,7 +35,7 @@ export default function RegisterScreen() {
 					},
 				},
 			]);
-		} catch (error) {
+		} catch (_error) {
 			Alert.alert(t("register.error"), t("register.serverError"));
 		}
 	}
