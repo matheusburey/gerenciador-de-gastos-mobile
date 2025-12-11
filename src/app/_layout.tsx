@@ -1,4 +1,5 @@
-import "../global.css";
+import Provider from "@/contexts";
+import "../../global.css";
 
 import "@/lib/i18n";
 import { Stack } from "expo-router";
@@ -16,7 +17,9 @@ export default function RootLayout() {
 
 	return (
 		<>
-			<Stack screenOptions={{ headerShown: false }} />
+			<Provider>
+				<Stack screenOptions={{ headerShown: false }} />
+			</Provider>
 			<StatusBar style="auto" />
 		</>
 	);
