@@ -1,36 +1,38 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router } from "expo-router";
 import { Fingerprint } from "lucide-react-native";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Alert, Text, TouchableOpacity, View } from "react-native";
+import { Alert, Image, Text, TouchableOpacity, View } from "react-native";
 
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 
-import { loginService } from "@/services/users";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function LoginScreen() {
 	const { t } = useTranslation();
+	const { login } = useAuth();
 
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	async function handleLogin() {
 		try {
-			const user = await loginService({ email, password });
-			await AsyncStorage.setItem("user", JSON.stringify(user));
-			router.push("/(tabs)");
-		} catch (error) {
-			console.log(error);
+			await login({ email, password });
+		} catch (_error) {
 			Alert.alert(t("login.error"), t("login.serverError"));
 		}
 	}
 
 	return (
-		<View className="flex-1 bg-gray-100 dark:bg-zinc-800 justify-center">
+		<View className="flex-1 bg-blue-50 dark:bg-zinc-800 justify-center">
 			<View className="w-full max-w-md mx-auto px-10 gap-4">
-				<Text className="text-3xl dark:text-zinc-200 font-bold">
+				<Image
+					source={require("@/assets/images/logo-full.png")}
+					style={{ width: 280, height: 80 }}
+					className="text-blue-400 mx-auto"
+				/>
+				<Text className="text-2xl dark:text-zinc-200 font-bold">
 					{t("login.title")}
 				</Text>
 				<Input

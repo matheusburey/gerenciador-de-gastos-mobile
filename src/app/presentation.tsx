@@ -58,7 +58,7 @@ const features = [
 ];
 
 export default function PresentationScreen() {
-	const { startWithoutLogin } = useAuth();
+	const { firstAccessPerformed } = useAuth();
 	const { t } = useTranslation();
 
 	return (
@@ -95,7 +95,7 @@ export default function PresentationScreen() {
 						</TouchableOpacity>
 						<TouchableOpacity
 							className="mt-6 bg-white rounded-lg px-4 py-3 items-center border border-gray-300 shadow-sm"
-							onPressOut={startWithoutLogin}
+							onPressOut={firstAccessPerformed}
 						>
 							<Text className="text-gray-500 font-bold text-lg">
 								Começar agora
