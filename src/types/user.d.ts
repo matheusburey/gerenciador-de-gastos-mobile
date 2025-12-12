@@ -2,15 +2,13 @@ interface IUser {
 	id: number;
 	username: string;
 	email: string;
-	password: string;
-	phone: string;
+	profileImage: string;
 }
 
 interface IRegisterUserParams {
 	name: string;
 	email: string;
 	password: string;
-	phone: string;
 }
 
 interface IResponseLoginData {
@@ -21,4 +19,9 @@ interface IResponseLoginData {
 interface ILoginParams {
 	email: string;
 	password: string;
+}
+
+interface IUserWithToken {
+	token: string;
+	user: IUser;
 }

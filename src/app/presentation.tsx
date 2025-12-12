@@ -62,8 +62,8 @@ export default function PresentationScreen() {
 	const { t } = useTranslation();
 
 	return (
-		<View className="bg-white">
-			<SafeAreaView className="flex-1">
+		<View className="bg-white flex-1">
+			<SafeAreaView>
 				<View className="px-4 flex-row items-center mt-2 pb-2 justify-between border-b border-gray-200">
 					<Image
 						source={require("@/assets/images/logo-full.png")}
@@ -75,7 +75,7 @@ export default function PresentationScreen() {
 					</Link>
 				</View>
 				<ScrollView>
-					<View className="px-4 py-8 bg-indigo-100">
+					<View className="px-4 py-8 bg-indigo-50">
 						<Text className="text-2xl font-bold">{t("home.title")}</Text>
 						<Text className="text-2xl font-bold text-blue-600">
 							{t("home.title2")}
@@ -163,7 +163,7 @@ export default function PresentationScreen() {
 					</View>
 
 					{/* <!-- Footer --> */}
-					<View className="bg-white mb-24">
+					<View className="bg-white mb-8">
 						<View className="max-w-7xl mx-auto py-12 px-4">
 							<View className="justify-between items-center">
 								<Image

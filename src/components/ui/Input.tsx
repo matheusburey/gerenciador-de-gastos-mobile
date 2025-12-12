@@ -1,23 +1,21 @@
-import { cn } from "@/lib/utils";
 import { TextInput, type TextInputProps } from "react-native";
+import { cn } from "@/lib/utils";
 
 export default function Input({
 	className,
-	placeholderClassName,
 	editable,
 	...props
 }: TextInputProps) {
 	return (
 		<TextInput
 			className={cn(
-				"h-14 rounded-md border px-3 text-lg font-bold focus:border-purple-600",
-				editable === false
-					? "border-purple-300 bg-gray-300"
-					: "bg-white border-transparent text-purple-800",
+				"h-14 rounded-md border text-lg focus:border-blue-600",
+				editable
+					? "border-gray-500 bg-gray-300"
+					: "bg-white border-transparent text-gray-800",
 				className,
 			)}
 			editable={editable}
-			placeholderClassName={cn("text-muted-foreground", placeholderClassName)}
 			{...props}
 		/>
 	);
