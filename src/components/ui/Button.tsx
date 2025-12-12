@@ -11,7 +11,7 @@ type ButtonProps = TouchableOpacityProps & {
 export default function Button({ title, ...rest }: ButtonProps) {
 	return (
 		<TouchableOpacity
-			className="bg-purple-500 h-12 w-full rounded-lg items-center justify-center disabled:bg-purple-300"
+			className="bg-blue-500 h-12 w-full rounded-lg items-center justify-center disabled:bg-blue-300"
 			activeOpacity={0.8}
 			{...rest}
 		>
