@@ -12,14 +12,18 @@ export async function getUserData(userID: number): Promise<IUser> {
 	return res.data;
 }
 
-export async function createUser(params: IRegisterUserParams): Promise<IUser> {
-	const res = await api.post("/users", params);
+export async function createUser(
+	payload: IRegisterUserParams,
+): Promise<IUserWithToken> {
+	const res = await api.post("/auth/signup", payload);
 	return res.data;
 }
 
-export async function loginService(params: ILoginParams): Promise<IUser> {
-	const res = await api.get("/users", { params });
-	return res.data[0];
+export async function loginService(
+	payload: ILoginParams,
+): Promise<IUserWithToken> {
+	const res = await api.post("/auth/login", payload);
+	return res.data;
 }
 
 export async function refreshingToken(
