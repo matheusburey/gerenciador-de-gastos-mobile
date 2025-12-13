@@ -1,11 +1,11 @@
 import type { PropsWithChildren } from "react";
 import { AuthProvider } from "./authContext";
-import { TransactionsProvider } from "./TransactionsContext";
+import { DataProvider } from "./dataContext";
 
 export default function Provider({ children }: PropsWithChildren) {
 	return (
 		<AuthProvider>
-			<TransactionsProvider>{children}</TransactionsProvider>
+			<DataProvider>{children}</DataProvider>
 		</AuthProvider>
 	);
 }

@@ -1,15 +1,17 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router } from "expo-router";
 import {
 	createContext,
 	type PropsWithChildren,
+	useCallback,
 	useEffect,
 	useState,
-	useCallback,
 } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createUser, loginService } from "@/services/users";
 
 interface AuthContextProps {
+	token: string;
+	user: IUser;
 	isFirstAccess: boolean;
 	firstAccessPerformed: () => void;
 	register: (payload: IRegisterUserParams) => void;
@@ -20,8 +22,9 @@ interface AuthContextProps {
 export const AuthContext = createContext({} as AuthContextProps);
 
 export const AuthProvider = ({ children }: PropsWithChildren) => {
+	const [token, setToken] = useState("");
 	const [isFirstAccess, setIsFirstAccess] = useState(false);
-	const [userWithToken, setUserWithToken] = useState({} as IUserWithToken);
+	const [user, setUser] = useState({} as IUser);
 
 	async function firstAccessPerformed() {
 		await AsyncStorage.setItem("isFirstAccess", "false");
@@ -34,23 +37,29 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
 		setIsFirstAccess(getIsFirstAccess !== "false");
 		const userRaw = await AsyncStorage.getItem("moneyFlow:userWithToken");
 		if (userRaw) {
-			const user = JSON.parse(userRaw);
-			setUserWithToken(user);
+			const userWithToken = JSON.parse(userRaw);
+			setToken(userWithToken.token);
+			setUser(userWithToken.user);
 		}
 	}, []);
 
 	async function register(payload: IRegisterUserParams) {
 		const user = await createUser(payload);
 		setUserWithToken(user);
+		setToken(user.token);
 		await AsyncStorage.setItem("moneyFlow:userWithToken", JSON.stringify(user));
 
 		firstAccessPerformed();
 	}
 
 	async function login(payload: ILoginParams) {
-		const user = await loginService(payload);
-		setUserWithToken(user);
-		await AsyncStorage.setItem("moneyFlow:userWithToken", JSON.stringify(user));
+		const userWithToken = await loginService(payload);
+		setUser(userWithToken.user);
+		setToken(userWithToken.token);
+		await AsyncStorage.setItem(
+			"moneyFlow:userWithToken",
+			JSON.stringify(userWithToken),
+		);
 
 		firstAccessPerformed();
 	}
@@ -67,7 +76,15 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
 
 	return (
 		<AuthContext.Provider
-			value={{ isFirstAccess, firstAccessPerformed, register, login, logout }}
+			value={{
+				token,
+				user,
+				isFirstAccess,
+				firstAccessPerformed,
+				register,
+				login,
+				logout,
+			}}
 		>
 			{children}
 		</AuthContext.Provider>
