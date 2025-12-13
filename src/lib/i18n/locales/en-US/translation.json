@@ -20,6 +20,10 @@
 		"expense": "Expenses",
 		"bank": "Banks"
 	},
+	"listTransactions": {
+		"currentBalance": "Current balance",
+		"monthlyBalance": "Monthly balance"
+	},
 	"expenses": {
 		"title": "Expenses!"
 	},

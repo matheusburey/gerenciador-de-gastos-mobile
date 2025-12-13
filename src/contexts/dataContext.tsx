@@ -1,6 +1,12 @@
 import { createContext, useCallback, useEffect, useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { getDashboard } from "@/services/dashboard";
+import type {
+	IBankAccount,
+	ISummary,
+	ITransaction,
+	ITransactionsType,
+} from "@/types/data";
 
 interface ITransactionsContext {
 	loading: boolean;

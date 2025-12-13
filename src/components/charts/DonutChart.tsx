@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Animated, Easing, Text, View } from "react-native";
 import Svg, { Circle, G } from "react-native-svg";
+import type { ITransactionTypeData } from "@/types/data";
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 

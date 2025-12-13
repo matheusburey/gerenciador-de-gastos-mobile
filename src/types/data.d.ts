@@ -1,11 +1,13 @@
-interface ICategory {
+import type { IconType } from "@/components/ui/Icon";
+
+export interface ICategory {
 	id: string;
-	icon: string;
+	icon: IconType;
 	name: string;
 	color: string;
 }
 
-interface ITransaction {
+export interface ITransaction {
 	id: string;
 	type: "income" | "expense";
 	amount: number;
@@ -14,21 +16,21 @@ interface ITransaction {
 	category: ICategory;
 }
 
-interface ISummary {
+export interface ISummary {
 	totalBalance: number;
 	totalIncome: number;
 	totalExpenses: number;
 	totalCredit: number;
 }
 
-interface ITransactionTypeData {
+export interface ITransactionTypeData {
 	categoryId: string;
 	categoryName: string;
 	categoryColor: string;
 	amount: number;
 }
 
-interface IBankAccount {
+export interface IBankAccount {
 	id: string;
 	name: string;
 	color: string;
@@ -41,12 +43,12 @@ interface IBankAccount {
 	updatedAt: string;
 }
 
-interface ITransactionsType {
+export interface ITransactionsType {
 	income: ITransactionTypeData[];
 	expense: ITransactionTypeData[];
 }
 
-interface IDashboard {
+export interface IDashboard {
 	accounts: IBankAccount[];
 	summary: ISummary;
 	recentTransactions: ITransaction[];

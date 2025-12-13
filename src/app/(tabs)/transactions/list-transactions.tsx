@@ -4,8 +4,8 @@ import { Text, TouchableOpacity, View } from "react-native";
 import Container from "@/components/ui/Container";
 import Icon from "@/components/ui/Icon";
 import Select from "@/components/ui/Select";
-import { useData } from "@/hooks/useData";
 import { formatCurrency } from "@/helpers/currency";
+import { useData } from "@/hooks/useData";
 
 const TRANSACTION_TYPE = [
 	{ label: "Transações", value: "all" },

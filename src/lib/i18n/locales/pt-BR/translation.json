@@ -36,6 +36,10 @@
 		"expense": "Despesas",
 		"bank": "Bancos"
 	},
+	"listTransactions": {
+		"currentBalance": "Saldo atual",
+		"monthlyBalance": "Saldo mensal"
+	},
 	"expenses": {
 		"title": "Despesas!"
 	},

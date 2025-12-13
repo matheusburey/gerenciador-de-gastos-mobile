@@ -69,7 +69,7 @@ export default function DashboardScreen() {
 						</View>
 					</View>
 				</View>
-				<View className="bg-white my-6 mx-2 rounded-xl p-4">
+				<View className="bg-white mt-6 mx-2 rounded-xl p-4">
 					<Text className="text-lg font-bold text-gray-700">
 						{t("dashboard.expense")}:
 					</Text>
