@@ -1,5 +1,4 @@
 import Checkbox from "expo-checkbox";
-import { router } from "expo-router";
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert, Image, Text, TouchableOpacity, View } from "react-native";

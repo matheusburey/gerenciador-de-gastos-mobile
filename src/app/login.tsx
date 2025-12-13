@@ -1,12 +1,11 @@
 import { router } from "expo-router";
-import { Fingerprint } from "lucide-react-native";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert, Image, Text, TouchableOpacity, View } from "react-native";
 
 import Button from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
 import Input from "@/components/ui/Input";
-
 import { useAuth } from "@/hooks/useAuth";
 
 export default function LoginScreen() {
@@ -56,7 +55,7 @@ export default function LoginScreen() {
 					className="mx-auto p-6 my-4 rounded-full"
 					activeOpacity={0.8}
 				>
-					<Fingerprint size={50} color="#52525B" />
+					<Icon size={50} name="FingerprintPattern" color="#52525B" />
 				</TouchableOpacity>
 
 				<TouchableOpacity
