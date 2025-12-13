@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import DonutChart from "@/components/charts/DonutChart";
 import SelectDateModal from "@/components/modal/SelectDateModal";
 import Container from "@/components/ui/Container";
@@ -25,7 +25,7 @@ export default function DashboardScreen() {
 
 	return (
 		<Container>
-			<ScrollView className="bg-blue-100">
+			<View className="bg-blue-100">
 				<View className="bg-white pt-2 pb-8 rounded-b-xl">
 					<TouchableOpacity
 						className="flex-row gap-2 w-fit px-6 py-2 mx-auto items-center"
@@ -95,7 +95,7 @@ export default function DashboardScreen() {
 						</View>
 					))}
 				</View>
-			</ScrollView>
+			</View>
 			<SelectDateModal
 				openModal={openModal}
 				handleChangeMonth={handleChangeMonth}
