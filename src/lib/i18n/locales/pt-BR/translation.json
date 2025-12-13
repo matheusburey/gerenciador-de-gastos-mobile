@@ -1,6 +1,7 @@
 {
 	"home": {
-		"title": "Home!"
+		"title": "Controle suas finanças",
+		"title2": "de forma fácil e eficiente!"
 	},
 	"login": {
 		"title": "Entrar em sua Conta!",
@@ -27,17 +28,22 @@
 		"errorPassword": "As senhas devem ser iguais!",
 		"serverError": "Ocorreu um erro no servidor, tente novamente!",
 		"successTitle": "Conta criada com sucesso!",
-		"success": "Conta criada com sucesso!",
-		"buttonSuccess": "Ir para o Login"
+		"success": "Conta criada com sucesso!"
 	},
 	"dashboard": {
-		"title": "Dashboard!"
+		"total": "Saldo em contas",
+		"income": "Receitas",
+		"expense": "Despesas",
+		"bank": "Bancos"
 	},
 	"expenses": {
 		"title": "Despesas!"
 	},
 	"menu": {
 		"dashboard": "Dashboard",
-		"expenses": "Despesas"
+		"expenses": "Despesas",
+		"transactions": "Transações",
+		"newTransaction": "Nova Transação",
+		"settings": "Configurações"
 	}
 }

@@ -1,18 +1,32 @@
 {
 	"home": {
-		"title": "Home!"
+		"title": "Manage your finances",
+		"title2": "easily and efficiently!"
 	},
 	"login": {
-		"title": "Login to Your Account!"
+		"title": "Login to Your Account!",
+		"email": "E-mail",
+		"password": "Password",
+		"button": "Enter",
+		"forgot": "Forgot your password?",
+		"createAccountQuestion": "Don't have an account?",
+		"createAccount": "Create one!",
+		"error": "Something went wrong!",
+		"serverError": "A server error occurred, please try again!"
 	},
 	"dashboard": {
-		"title": "Dashboard!"
+		"total": "Account Balance",
+		"income": "Income",
+		"expense": "Expenses",
+		"bank": "Banks"
 	},
 	"expenses": {
 		"title": "Expenses!"
 	},
 	"menu": {
 		"dashboard": "Dashboard",
-		"expenses": "Expenses"
+		"expenses": "Expenses",
+		"transactions": "Transactions",
+		"settings": "Settings"
 	}
 }

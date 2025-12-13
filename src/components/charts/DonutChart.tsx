@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { View, Animated, Easing, Text } from "react-native";
+import { Animated, Easing, Text, View } from "react-native";
 import Svg, { Circle, G } from "react-native-svg";
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
